@@ -1,0 +1,22 @@
+.about-us__section {
+  padding: 120px 0 427px;
+  background-color: var(--color-pink);
+}
+
+.about-us__cont {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 64px;
+}
+
+.about-us__content {
+  color: var(--color-white);
+}
+
+.about-us__caption {
+  margin-top: 21px;
+}
+
+.about-us__buttons {
+  margin-bottom: 21px;
+}

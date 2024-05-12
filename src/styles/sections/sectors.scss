@@ -1,0 +1,22 @@
+.sectors__section {
+  padding: 86px 0;
+  background: url(../../assets/images/sectors-bg.png) no-repeat center center;
+  background-size: cover;
+}
+
+.sectors__caption {
+  color: var(--color-pink);
+}
+
+.sectors__heading {
+  color: var(--color-purple);
+}
+
+.sectors__button {
+  background-color: var(--color-pink);
+}
+
+.sectors__link {
+  color: var(--color-white);
+  text-transform: uppercase;
+}

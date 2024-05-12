@@ -1,0 +1,24 @@
+.header__cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 0;
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header__interact-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__burger {
+  padding: 8px;
+  border: 2px solid #db509b;
+  border-radius: 1000px;
+}
