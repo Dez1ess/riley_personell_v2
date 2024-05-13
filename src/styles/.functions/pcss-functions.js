@@ -1,5 +1,5 @@
-const maxWidth = 1440;
-const minWidth = 768;
+const maxWidth = 1276;
+const minWidth = 375;
 
 export function ac(
 	startSize,

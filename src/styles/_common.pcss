@@ -53,10 +53,10 @@ body {
 .cont {
   margin: 0 auto;
   max-width: 1276px;
-  width: perc(1276);
+  width: calc(100vw - 164px);
 
   @mixin max-lg {
-    width: 89.33%;
+    width: calc(100vw - 48px);
   }
 }
 
@@ -75,6 +75,10 @@ section {
 
   &:hover {
     transform: scale(1.06);
+  }
+
+  @mixin max-lg {
+    width: 127px;
   }
 }
 
@@ -165,7 +169,6 @@ section {
   }
 }
 
-
 /* CUSTOM COMMON STYLES */
 /* SWIPER */
 .swiper {
@@ -209,11 +212,19 @@ section {
 }
 
 .swipe-buttons {
-  position: absolute;
-  right: 82px;
-  bottom: 90px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 16px;
+  margin-top: 24px;
+
+
+  @mixin sm {
+    position: absolute;
+    right: 82px;
+    bottom: 90px;
+    gap: 16px;
+  }
 }
 
 .swipe-button {
@@ -225,6 +236,11 @@ section {
   border-radius: 1000px;
   background-color: var(--color-white);
   cursor: pointer;
+
+  @mixin max-lg {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .swipe-button-previous {
