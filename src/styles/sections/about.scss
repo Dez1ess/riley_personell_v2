@@ -1,22 +1,38 @@
 .about-us__section {
-  padding: 120px 0 427px;
+  padding: 40px 0 474px;
   background-color: var(--color-pink);
+
+  @mixin sm {
+    padding: 120px 0 427px;
+  }
 }
 
 .about-us__cont {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 64px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-direction: column-reverse;
+
+  @mixin xxl {
+    gap: 64px;
+    flex-direction: row;
+  }
 }
 
 .about-us__content {
+  flex: 1;
   color: var(--color-white);
 }
 
-.about-us__caption {
-  margin-top: 21px;
+.about-us__picture {
+  flex: 1;
 }
 
-.about-us__buttons {
-  margin-bottom: 21px;
+.about-us__caption {
+  margin-top: 0;
+
+  @mixin sm {
+    margin-top: 21px;
+  }
 }
+

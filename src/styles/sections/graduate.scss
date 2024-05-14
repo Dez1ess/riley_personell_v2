@@ -1,20 +1,55 @@
 .graduate__section {
   position: relative;
-  margin-top: -307px;
+  margin-top: -435px;
+  margin-bottom: 40px;
+
+  @mixin sm {
+    margin-top: -307px;
+    margin-bottom: 66px;
+  }
 }
 
 .graduate__cont {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  direction: rtl;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+
+  @mixin xxl {
+    align-items: stretch;
+    flex-direction: row-reverse;
+  }
 }
 
 .graduate__content {
-  padding: 64px 64px 0 64px;
-  border-top-right-radius: 40px;
+  flex: 1;
+  padding: 24px 16px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
-  direction: ltr;
   background-color: var(--color-white);
+
+  @mixin xxl {
+    padding: 64px 64px 0 64px;
+
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+}
+
+.graduate__picture {
+  flex: 1;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+
+  @mixin xxl {
+    border-radius: 50%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 0;
+  }
 }
 
 .graduate__caption {
@@ -27,11 +62,4 @@
 
 .graduate__description {
   color: var(--color-black);
-}
-
-.graduate__picture {
-  border-top-left-radius: 40px;
-  border-bottom-left-radius: 40px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
 }

@@ -1,7 +1,11 @@
 .sectors__section {
-  padding: 86px 0;
-  background: url(../../assets/images/sectors-bg.png) no-repeat center center;
+  padding: 48px 0 40px;
+  background: url(../../assets/images/sectors-bg.png) no-repeat;
   background-size: cover;
+
+  @mixin sm {
+    padding: 86px 0;
+  }
 }
 
 .sectors__caption {
@@ -14,9 +18,53 @@
 
 .sectors__button {
   background-color: var(--color-pink);
+  width: 100%;
+  text-align: center;
+
+  @mixin sm {
+    width: max-content;
+  }
 }
 
 .sectors__link {
   color: var(--color-white);
   text-transform: uppercase;
+}
+
+.sectors__navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
+
+  @mixin lg {
+    justify-content: initial;
+  }
+}
+
+.sectors__swipe-buttons {
+  position: static;
+  margin: 0;
+}
+
+.sectors__swipe-buttons .sectors__swipe-button {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s ease;
+}
+
+.sectors__swipe-buttons .sectors__swipe-button:hover {
+  transform: scale(0.9);
+}
+
+.sectors__swipe-buttons .sectors__swipe-button:active {
+  transform: scale(0.8);
+}
+
+.sectors__swipe-buttons .sectors__swipe-button-prev {
+  border: 1px solid var(--color-pink);
+}
+
+.sectors__swipe-buttons .sectors__swipe-button-next {
+  background-color: var(--color-pink);
 }
