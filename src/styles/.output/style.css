@@ -1074,6 +1074,7 @@ section {
   }
 .burger-menu .burger-menu__close img {
       width: 20px;
+      height: 20px;
     }
 .burger-menu .burger-menu__top__title {
     font-size: 28px;
