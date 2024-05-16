@@ -224,7 +224,6 @@ section {
     .swiper-slide__description {
       display: block;
     }
-
   }
 }
 
@@ -446,8 +445,10 @@ section {
 .burger {
   cursor: pointer;
   transition: transform 0.3s ease;
-}
 
-.burger:hover {
-  transform: scale(1.1);
+  @mixin lg {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }
