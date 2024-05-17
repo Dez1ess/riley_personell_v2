@@ -1,22 +1,17 @@
 import './utils/vh.utils.js';
-import './utils/animate-on-view.utils'
-
+import './utils/animate-on-view.utils';
 import './components/uploadFile.component.js';
 import './components/inputs.component.js';
-
 import './libs/countUp.lib.js';
-
-import Swiper, {Navigation, Scrollbar} from 'swiper';
+import Swiper, { Navigation, Scrollbar } from 'swiper';
 
 export const sectorsSwiper = new Swiper(".swiper", {
   slidesPerView: 3,
-  slidesOffsetAfter: 85,
   spaceBetween: 16,
   loop: true,
   slideActiveClass: "swiper-slide-active",
   slideBlankClass: "swiper-slide-blank",
   slideToClickedSlide: true,
-  slidesOffsetBefore: 0,
   breakpoints: {
     320: {
       slidesPerView: 1.1,
@@ -41,7 +36,6 @@ export const sectorsSwiper = new Swiper(".swiper", {
   },
 });
 
-
 /* BURGER MENU LINK COLLAPSE */
 document.addEventListener('DOMContentLoaded', function() {
   const advancedLink = document.querySelector('.burger-menu__link-advanced__title');
@@ -61,11 +55,35 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   burger.addEventListener('click', openBurgerMenu);
-
   closeButton.addEventListener('click', closeBurgerMenu);
-
   advancedLink.addEventListener('click', function() {
     advancedLink.classList.toggle('expanded');
     advancedContent.classList.toggle('expanded');
   });
+
+  // Call the handleResize function initially
+  handleResize();
 });
+
+window.addEventListener('resize', handleResize);
+
+function handleResize() {
+  const slides = document.querySelectorAll('.swiper-slide');
+  const activeSlide = document.querySelector('.swiper-slide-active');
+
+  if (slides.length > 0 && activeSlide !== null) {
+    if (window.innerWidth < 768) {
+      // Mobile viewport
+      slides.forEach(slide => {
+        slide.classList.add('swiper-slide-mobile-active');
+      });
+      activeSlide.classList.remove('swiper-slide-active');
+    } else {
+      // Desktop viewport
+      slides.forEach(slide => {
+        slide.classList.remove('swiper-slide-mobile-active');
+      });
+      activeSlide.classList.add('swiper-slide-active');
+    }
+  }
+}
