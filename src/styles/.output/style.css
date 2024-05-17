@@ -259,6 +259,7 @@ h6 {
 html {
   scrollbar-width: thin;
   scrollbar-color: var(--cl-primary) transparent;
+  scroll-behavior: smooth;
 }
 body {
   position: relative;
