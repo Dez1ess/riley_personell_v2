@@ -1,0 +1,38 @@
+.footer {
+  background-color: var(--color-midnight);
+  color: var(--color-white);
+  padding: 40px 0 32px;
+}
+
+.footer__cont {
+  display: grid;
+  place-content: center;
+}
+
+.footer__company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  .footer__company__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+
+    img {
+      width: 168px;
+
+      @mixin md {
+        width: 240px;
+      }
+    }
+  }
+
+  .footer__company__button {
+    text-align: center;
+    background-color: var(--color-white);
+  }
+}

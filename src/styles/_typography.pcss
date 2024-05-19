@@ -41,12 +41,17 @@
 }
 
 .text-button {
+  font-size: ac(18px, 16px);
   font-family: 'Rubik', sans-serif;
-  font-size: 18px;
   font-weight: 500;
-  letter-spacing: 0.02em;
-  line-height: normal;
-  text-transform: none;
+  line-height: 19.2px;
+  letter-spacing: 4%;
+  text-transform: uppercase;
+
+  @mixin sm {
+    letter-spacing: 0.02em;
+    line-height: normal;
+  }
 }
 
 .filled-button-text {
@@ -72,6 +77,17 @@
   @mixin sm {
     letter-spacing: 0.2em;
     line-height: normal;
+  }
+}
+
+h2 {
+  font-size: ac(72px, 36px);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 43.2px;
+
+  @mixin sm {
+    line-height: 80px;
   }
 }
 
@@ -115,6 +131,17 @@ h6 {
   line-height: 1.33em;
 }
 
+.subtitle-1 {
+  font-size: ac(28px, 24px);
+  font-weight: 600;
+  letter-spacing: 2%;
+  line-height: 134%;
+
+  @mixin sm {
+    line-height: 36px;
+  }
+}
+
 .subtitle-2 {
   font-size: ac(28px, 18px);
   font-weight: 400;
@@ -123,6 +150,17 @@ h6 {
 
   @mixin sm {
     line-height: 36px;
+  }
+}
+
+.subtitle-3 {
+  font-size: ac(22px, 16px);
+  font-weight: 600;
+  letter-spacing: 2%;
+  line-height: 120%;
+
+  @mixin sm {
+    line-height: 34px;
   }
 }
 
@@ -149,5 +187,16 @@ h6 {
 
   & + p {
     margin-top: 12px;
+  }
+}
+
+.font-link {
+  font-size: ac(18px, 14px);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 19.6px;
+
+  @mixin sm {
+    line-height: auto;
   }
 }

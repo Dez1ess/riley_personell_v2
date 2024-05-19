@@ -1,0 +1,89 @@
+.schools__section {
+  padding: 40px 0 32px;
+  background-color: var(--color-white);
+
+  @mixin sm {
+    padding: 82px 0;
+  }
+
+  .schools__content {
+    text-align: left;
+
+    @mixin md {
+      text-align: center;
+    }
+
+    .schools__caption {
+      color: var(--color-pink);
+    }
+
+    .schools__heading {
+      color: var(--color-purple);
+    }
+  }
+
+  .schools__swiper-wrapper {
+    @mixin xxxl {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .schools__swiper1 {
+    margin-top: 40px;
+    margin-bottom: -5px;
+
+    @mixin md {
+      margin-top: 56px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .schools__swiper2 {
+    margin-bottom: 10px;
+    
+    @mixin md {
+      margin-bottom: 56px;
+    }
+  }
+
+  .schools__swiper1,
+  .schools__swiper2 {
+    width: 100vw;
+    height: 140px;
+
+    .schools__swiper-slide {
+      width: 200px;
+      height: 116px;
+      display: grid;
+      place-content: center;
+      border: 1px solid #d0d1d3;
+      border-radius: 12px;
+
+      @mixin md {
+        width: 244px;
+        height: 140px;
+      }
+    }
+  }
+
+  .button__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .schools__button {
+      background-color: var(--color-pink);
+      transition: filter 0.3s ease;
+
+      &:hover {
+        filter: brightness(1.1);
+      }
+
+      .schools__link {
+        color: var(--color-white);
+      }
+    }
+  }
+}

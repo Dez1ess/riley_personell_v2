@@ -1,0 +1,147 @@
+.opportunities__section {
+  padding: 40px 0;
+  background: url(../../assets/images/opportunities-bg.png) no-repeat center/cover;
+
+  @mixin md {
+    padding: 120px 0;
+  }
+  
+}
+
+.opportunities__section__caption {
+  color: var(--color-white);
+}
+
+.opportunities__section__heading {
+  color: var(--color-white);
+}
+
+.opportunities__swipe-buttons {
+  position: static;
+  margin: 0;
+
+  .opportunities__swipe-button {
+    box-shadow: 0px 2px 4px 0px #0000001f, 0px 6px 12px 0px #00000014;
+    opacity: 0.5;
+  }
+}
+
+.opportunities__section__button {
+  width: 100%;
+  text-align: center;
+  background-color: var(--color-pink);
+
+  @mixin md {
+    width: max-content;
+  }
+
+  .opportunities__section__link {
+    color: var(--color-white);
+  }
+}
+
+.opportunities__swipe-buttons-mobile {
+  margin-top: 20px;
+
+  @mixin md {
+    display: none;
+  }
+}
+
+.opportunities__swiper {
+  width: 100vw;
+  margin-top: 40px;
+  padding-right: calc(50vw - 50%);
+
+  @mixin md {
+    margin-top: 56px;
+  }
+}
+
+.opportunities__swiper-slide {
+  width: 327px;
+  height: 327px;
+  padding: 24px;
+  background-color: var(--color-white);
+  border: 1px solid #d0d1d3;
+  border-radius: 22px;
+
+  @mixin md {
+    width: 412px;
+    height: 412px;
+    padding: 32px;
+  }
+
+  .opportunities__school {
+    color: var(--color-pink);
+  }
+
+  .opportunities__role {
+    color: #242426;
+    margin-top: 8px;
+
+    @mixin md {
+      margin-top: 12px;
+    }
+  }
+
+  .opportunities__conditions {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 16px;
+
+    @mixin md {
+      margin-top: 28px;
+    }
+
+    .opportunities__condition {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      line-height: 16.8px;
+      font-weight: 600;
+      color: var(--color-midnight);
+
+      @mixin md {
+        font-size: 16px;
+        line-height: 19.2px;
+      }
+    }
+  }
+
+  .opportunities__salary {
+    margin-top: 13px;
+    font-size: 14px;
+    line-height: 16.8px;
+    font-weight: 600;
+    color: var(--color-midnight);
+
+    @mixin md {
+      font-size: 16px;
+      line-height: 19.2px;
+    }
+  }
+
+  .opportunities__description {
+    margin-top: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.6px;
+    color: var(--color-black);
+
+    @mixin md {
+      margin-top: 28px;
+      line-height: 16.8px;
+    }
+  }
+
+  .opportunities__swiper-slide__interact {
+    margin-top: 22px;
+
+    @mixin md {
+      margin-top: 44px;
+    }
+  }
+}
